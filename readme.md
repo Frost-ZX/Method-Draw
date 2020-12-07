@@ -1,45 +1,28 @@
-# Method Draw
+# Method Draw 中文版
 
-Method Draw is a web based vector drawing application.
+- 原项目：[methodofaction/Method-Draw](https://github.com/methodofaction/Method-Draw)
+- Method Draw 是一个基于 Web 的矢量绘图工具。
+- Method Draw 的目标是成为一个简单易用的 SVG 编辑器。它去除了一些功能，例如图层、线端样式，以换取更简单、更愉快的体验。如果您正在寻找功能更完整的开源矢量编辑器，可以试试 [SVG Edit](https://github.com/SVG-Edit/svgedit)。
 
-**Use [Method Draw](https://editor.method.ac) online.**
+## 开发
 
-![Method Draw](https://method.ac/assets/editor.png)
-
-The purpose of Method Draw is to provide a simple and easy-to-use SVG editor experience. It purposely removes some features such as layers and line-caps/corners in exchange for a more simple and pleasant experience. If you are looking for a more complete vector editing open-source solution, please check out SVG Edit [SVG Edit](https://github.com/SVG-Edit/svgedit).
-
-## Development
-
-Develop and run a local web server under `src`;
+在 `src` 目录下运行 Web 服务端并开发
 
 ```
 cd src
-python -m SimpleHTTPServer
+python -m http.server 端口
 ```
 
-## Build
+## 构建
 
-Install dev dependencies:
+安装项目依赖文件：
 
 `npm install`
 
-Then you can build into `dist` by running:
+（可能需要执行一次 `npm install -g gulp` 命令）
+
+然后执行以下命令，构建到 `dist` 中：
 
 `gulp`
 
-Deploy `dist` to your static file server of choice.
-
-## Release notes
-
-**2020.08.04** Vast code simplification  
-**2020.08.02** File clean-up and gulp build implemented  
-**2020.08.01** Project thawed  
-**2015.01.01** Project frozen  
-**2013.01.01** Project forked from SVG-Edit  
-
-Sponsor development in the form of [one-time donations](https://method.ac/donate/), or by hiring me to customize Method Draw for your own needs (only simple 2-20 hour projects).
-
-Method Draw is Copyright (c)
-Mark MacKay [mark@method.ac](mailto:mark@method.ac)
-
-Published under an MIT License. Enjoy.
+部署 `dist` 中的文件到 Web 服务器中即可。
