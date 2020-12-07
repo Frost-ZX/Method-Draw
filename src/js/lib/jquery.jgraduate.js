@@ -202,9 +202,9 @@ jQuery.fn.jGraduate =
       
             $this.addClass('jGraduate_Picker');
             $this.html('<ul class="jGraduate_tabs">' +
-                    '<li class="jGraduate_tab_color jGraduate_tab_current" data-type="col">Solid Color</li>' +
-                    '<li class="jGraduate_tab_lingrad" data-type="lg">Linear Gradient</li>' +
-                    '<li class="jGraduate_tab_radgrad" data-type="rg">Radial Gradient</li>' +
+                    '<li class="jGraduate_tab_color jGraduate_tab_current" data-type="col">纯色</li>' +
+                    '<li class="jGraduate_tab_lingrad" data-type="lg">线性渐变</li>' +
+                    '<li class="jGraduate_tab_radgrad" data-type="rg">径向渐变</li>' +
                   '</ul>' +
                   '<div class="jGraduate_colPick"></div>' +
                   '<div class="jGraduate_gradPick"></div>' +
@@ -224,42 +224,42 @@ jQuery.fn.jGraduate =
               '</div>' + 
               '<div class="jGraduate_Form jGraduate_Points jGraduate_lg_field">' +
                 '<div class="jGraduate_StopSection">' +
-                  '<label class="jGraduate_Form_Heading">Begin Point</label>' +
+                  '<label class="jGraduate_Form_Heading">起始点</label>' +
                   '<div class="jGraduate_Form_Section">' +
                     '<label>x:</label>' +
-                    '<input type="text" id="' + id + '_jGraduate_x1" size="3" title="Enter starting x value between 0.0 and 1.0"/>' +
+                    '<input type="text" id="' + id + '_jGraduate_x1" size="3" title="输入值为 0.0 ~ 1.0 之间的起始点 x 坐标"/>' +
                     '<label> y:</label>' +
-                    '<input type="text" id="' + id + '_jGraduate_y1" size="3" title="Enter starting y value between 0.0 and 1.0"/>' +
+                    '<input type="text" id="' + id + '_jGraduate_y1" size="3" title="输入值为 0.0 ~ 1.0 之间的起始点 y 坐标"/>' +
                   '</div>' +
                 '</div>' +
                 '<div class="jGraduate_StopSection">' +
-                  '<label class="jGraduate_Form_Heading">End Point</label>' +
+                  '<label class="jGraduate_Form_Heading">结束点</label>' +
                   '<div class="jGraduate_Form_Section">' +
                     '<label>x:</label>' +
-                    '<input type="text" id="' + id + '_jGraduate_x2" size="3" title="Enter ending x value between 0.0 and 1.0"/>' +
+                    '<input type="text" id="' + id + '_jGraduate_x2" size="3" title="输入值为 0.0 ~ 1.0 之间的结束点 x 坐标"/>' +
                     '<label> y:</label>' +
-                    '<input type="text" id="' + id + '_jGraduate_y2" size="3" title="Enter ending y value between 0.0 and 1.0"/>' +
+                    '<input type="text" id="' + id + '_jGraduate_y2" size="3" title="输入值为 0.0 ~ 1.0 之间的结束点 y 坐标"/>' +
                   '</div>' +
                 '</div>' +
               '</div>' +
               '<div class="jGraduate_Form jGraduate_Points jGraduate_rg_field">' +
           '<div class="jGraduate_StopSection">' +
-            '<label class="jGraduate_Form_Heading">Center Point</label>' +
+            '<label class="jGraduate_Form_Heading">中心点</label>' +
             '<div class="jGraduate_Form_Section">' +
               '<label>x:</label>' +
-              '<input type="text" id="' + id + '_jGraduate_cx" size="3" title="Enter x value between 0.0 and 1.0"/>' +
+              '<input type="text" id="' + id + '_jGraduate_cx" size="3" title="输入值为 0.0 ~ 1.0 之间的 x 坐标"/>' +
               '<label> y:</label>' +
-              '<input type="text" id="' + id + '_jGraduate_cy" size="3" title="Enter y value between 0.0 and 1.0"/>' +
+              '<input type="text" id="' + id + '_jGraduate_cy" size="3" title="输入值为 0.0 ~ 1.0 之间的 y 坐标"/>' +
             '</div>' +
           '</div>' +
           '<div class="jGraduate_StopSection">' +
-            '<label class="jGraduate_Form_Heading">Focal Point</label>' +
+            '<label class="jGraduate_Form_Heading">焦点</label>' +
             '<div class="jGraduate_Form_Section">' +
-              '<label>Match center: <input type="checkbox" checked="checked" id="' + id + '_jGraduate_match_ctr"/></label><br/>' +
+              '<label>与中心点一致：<input type="checkbox" checked="checked" id="' + id + '_jGraduate_match_ctr"/></label><br/>' +
               '<label>x:</label>' +
-              '<input type="text" id="' + id + '_jGraduate_fx" size="3" title="Enter x value between 0.0 and 1.0"/>' +
+              '<input type="text" id="' + id + '_jGraduate_fx" size="3" title="输入值为 0.0 ~ 1.0 之间的 x 坐标"/>' +
               '<label> y:</label>' +
-              '<input type="text" id="' + id + '_jGraduate_fy" size="3" title="Enter y value between 0.0 and 1.0"/>' +
+              '<input type="text" id="' + id + '_jGraduate_fy" size="3" title="输入值为 0.0 ~ 1.0 之间的 y 坐标"/>' +
             '</div>' +
           '</div>' +
               '</div>' +
@@ -275,37 +275,37 @@ jQuery.fn.jGraduate =
         '</div>' +
               '<div class="jGraduate_Form">' +
                 '<div class="jGraduate_Slider jGraduate_RadiusField jGraduate_rg_field">' +
-            '<label class="prelabel">Radius:</label>' +
-            '<div id="' + id + '_jGraduate_Radius" class="jGraduate_SliderBar jGraduate_Radius" title="Click to set radius">' +
+            '<label class="prelabel">半径：</label>' +
+            '<div id="' + id + '_jGraduate_Radius" class="jGraduate_SliderBar jGraduate_Radius" title="点击设置半径">' +
               '<img id="' + id + '_jGraduate_RadiusArrows" class="jGraduate_RadiusArrows" src="' + $settings.images.clientPath + 'rangearrows2.svg" width="9" height="20">' +
             '</div>' +
             '<label><input type="text" id="' + id + '_jGraduate_RadiusInput" size="3" value="100"/>%</label>' + 
                 '</div>' +
                 '<div class="jGraduate_Slider jGraduate_EllipField jGraduate_rg_field">' +
-            '<label class="prelabel">Ellip:</label>' +
-            '<div id="' + id + '_jGraduate_Ellip" class="jGraduate_SliderBar jGraduate_Ellip" title="Click to set Ellip">' +
+            '<label class="prelabel">椭圆：</label>' +
+            '<div id="' + id + '_jGraduate_Ellip" class="jGraduate_SliderBar jGraduate_Ellip" title="点击设置椭圆">' +
               '<img id="' + id + '_jGraduate_EllipArrows" class="jGraduate_EllipArrows" src="' + $settings.images.clientPath + 'rangearrows2.svg" width="9" height="20">' +
             '</div>' +
             '<label><input type="text" id="' + id + '_jGraduate_EllipInput" size="3" value="0"/>%</label>' + 
                 '</div>' +
                 '<div class="jGraduate_Slider jGraduate_AngleField jGraduate_rg_field">' +
-            '<label class="prelabel">Angle:</label>' +
-            '<div id="' + id + '_jGraduate_Angle" class="jGraduate_SliderBar jGraduate_Angle" title="Click to set Angle">' +
+            '<label class="prelabel">角度：</label>' +
+            '<div id="' + id + '_jGraduate_Angle" class="jGraduate_SliderBar jGraduate_Angle" title="点击设置角度">' +
               '<img id="' + id + '_jGraduate_AngleArrows" class="jGraduate_AngleArrows" src="' + $settings.images.clientPath + 'rangearrows2.svg" width="9" height="20">' +
             '</div>' +
             '<label><input type="text" id="' + id + '_jGraduate_AngleInput" size="3" value="0"/>º&nbsp;</label>' + 
                 '</div>' +
                 '<div class="jGraduate_Slider jGraduate_OpacField">' +
-            '<label class="prelabel">Opac:</label>' +
-            '<div id="' + id + '_jGraduate_Opac" class="jGraduate_SliderBar jGraduate_Opac" title="Click to set Opac">' +
+            '<label class="prelabel">透明度：</label>' +
+            '<div id="' + id + '_jGraduate_Opac" class="jGraduate_SliderBar jGraduate_Opac" title="点击设置透明度">' +
               '<img id="' + id + '_jGraduate_OpacArrows" class="jGraduate_OpacArrows" src="' + $settings.images.clientPath + 'rangearrows2.svg" width="9" height="20">' +
             '</div>' +
             '<label><input type="text" id="' + id + '_jGraduate_OpacInput" size="3" value="100"/>%</label>' + 
                 '</div>' +
               '</div>' +
               '<div class="jGraduate_OkCancel">' +
-                '<input type="button" id="' + id + '_jGraduate_Ok" class="jGraduate_Ok" value="OK"/>' +
-                '<input type="button" id="' + id + '_jGraduate_Cancel" class="jGraduate_Cancel" value="Cancel"/>' +
+                '<input type="button" id="' + id + '_jGraduate_Ok" class="jGraduate_Ok" value="确定"/>' +
+                '<input type="button" id="' + id + '_jGraduate_Cancel" class="jGraduate_Cancel" value="取消"/>' +
               '</div>');
               
       // --------------
