@@ -1224,7 +1224,7 @@ window.methodDraw = function() {
     
     var clickClear = function(){
       var dims = curConfig.dimensions;
-      $.confirm("<strong>Do you want to clear the drawing?</strong>\nThis will also erase your undo history", function(ok) {
+      $.confirm("<strong>确定要清空已绘制的内容？</strong>\n会同时清除操作历史记录（无法撤销）", function(ok) {
         if(!ok) return;
         setSelectMode();
         svgCanvas.deleteSelectedElements();
@@ -1441,7 +1441,7 @@ window.methodDraw = function() {
       }
   
       if (!svgCanvas.setSvgString($('#svg_source_textarea').val())) {
-        $.confirm("There were parsing errors in your SVG source.\nRevert back to original SVG source?", function(ok) {
+        $.confirm("SVG 源代码中有错误，无法正常解析。\n是否恢复为之前的 SVG 源代码？", function(ok) {
           if(!ok) return false;
           saveChanges();
         });
@@ -1527,7 +1527,7 @@ window.methodDraw = function() {
   
       if (editingsource) {
         if (orig_source !== $('#svg_source_textarea').val()) {
-          $.confirm("Ignore changes made to SVG source?", function(ok) {
+          $.confirm("取消更改？", function(ok) {
             if(ok) hideSourceEditor();
           });
         } else {
@@ -2311,7 +2311,7 @@ window.methodDraw = function() {
       if(undoMgr.getUndoStackSize() === 0) {
         func(true);
       } else {
-        $.confirm("Do you want to open a new file?\nThis will also erase your undo history", func);
+        $.confirm("确定要打开新的文件？\n会同时清除操作历史记录（无法撤销）", func);
       }
     }
           
