@@ -1413,7 +1413,7 @@ div.jGraduate_Slider img {
 
 .touch .contextMenu A {
   padding: 0 15px;
-  border-bottom: #;
+  /* border-bottom: #; */
   font-weight: bold;
   border-top: solid 1px #E3E3E3;
   height: 40px;
